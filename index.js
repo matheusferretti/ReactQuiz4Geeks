@@ -59,14 +59,22 @@ console.log(sum(...numbers));
 // //4) clone/copy obj1 into another variable using spread notation
 const obj1 = { key: 'value', x: 42 };
 
+const cloneObj = {...obj1};
+
+console.log(cloneObj);
+
 
 // //5)  use spread notation to merge these two objects into a single variable
-// const user1 = { 
-//     name: 'Steph', 
-//     age: 55, 
-// }; 
+const user1 = { 
+    name: 'Steph', 
+    age: 55, 
+}; 
   
-// const user2 = { 
-//     name: "Tiff", 
-//     location: "Alaska" 
-// }; 
+const user2 = { 
+    name: "Tiff", 
+    location: "Alaska" 
+}; 
+
+const mergedUsers = {...user1, ...user2};
+
+console.log(mergedUsers);
